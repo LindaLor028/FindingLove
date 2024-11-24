@@ -66,6 +66,14 @@ image livingroombg:
     "livingroombg.png"
     xysize(1920,1080)
 
+image enterbg:
+    "enterbg.png"
+    xysize(1920,1080)
+
+image centerbg:
+    "centerbg.png"
+    xysize(1920,1080)
+
 
 # The game starts here. ========================================================================================================================================================================
 
@@ -155,6 +163,7 @@ label start:
 label start_1:
     you "Hey... um-"
     anon "I gotta go!!!" #SOUND
+    scene garagebg
     "The lights flicker on again and you're standing alone in the parking garage."
     "Who was that..."
     "You look down and notice a keychain and pick it up..."
@@ -169,6 +178,7 @@ label start_2:
     anon "Ack!!!" #SOUND
     "It sounds like she ran off..."
     "The lights flicker on again and you're standing alone in the parking garage."
+    scene garagebg
     "You look at the keychain."
     jump keychain
 
@@ -182,6 +192,7 @@ label keychain:
 
 # 1.0 Center
 label center:
+    scene centerbg
     if notCompletedBall or notCompletedStage:
         "This place is crowded..."
         "How are you going to find her..."
@@ -203,6 +214,7 @@ label balltoss:
     jump balltoss_2
 
 label balltoss_2:
+    scene balltossbg
     if notTalkToCouple or notTalkToGirl or notTalkToGuy:
         menu:
             you "Hmmm, who to ball toss with..." 
@@ -409,6 +421,7 @@ label afar:
 
 # 2.1 Return To Main Area =======================================================================================================================
 label main_area:
+    scene centerbg
     you "Sometimes I forget how uneventful the Hmong New Year is..."
     you "{i}sigh{/i} Back to the beginning..."
     you "I just feel like maybe I'm looking in the wrong places..."
@@ -784,8 +797,8 @@ label claire_end:
     "Then one day, you hear a knock on the door."
     fbi "FBI OPEN UP!"
     you "The FBI???"
-    "You open the door and see the same FBI agent from the New Year 10 years ago..."
     show fbiI
+    "You open the door and see the same FBI agent from the New Year 10 years ago..."
     "Weird."
     fbi "You're under arrest for commiting life insurance fraud!!!"
     you "WHAT!?"
