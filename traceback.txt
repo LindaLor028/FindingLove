@@ -1,0 +1,24 @@
+﻿I'm sorry, but an uncaught exception occurred.
+
+While running game code:
+  File "game/script.rpy", line 334, in script
+    anon2 "Ooh I want to see!"
+Exception: Sayer 'anon2' is not defined.
+
+-- Full Traceback ------------------------------------------------------------
+
+Full traceback:
+  File "game/script.rpy", line 334, in script
+    anon2 "Ooh I want to see!"
+  File "/Volumes/renpy-8.3.2-sdk/renpy-8.3.2-sdk/renpy/ast.py", line 2573, in execute
+    Say.execute(self)
+  File "/Volumes/renpy-8.3.2-sdk/renpy-8.3.2-sdk/renpy/ast.py", line 575, in execute
+    who = eval_who(self.who, self.who_fast)
+  File "/Volumes/renpy-8.3.2-sdk/renpy-8.3.2-sdk/renpy/ast.py", line 464, in eval_who
+    raise Exception("Sayer '%s' is not defined." % who)
+Exception: Sayer 'anon2' is not defined.
+
+macOS-15.1.1-arm64-arm-64bit arm64
+Ren'Py 8.3.2.24090902
+FindingLove_AHmongNewYearGame 1.0
+Sat Nov 23 21:51:18 2024
