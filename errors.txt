@@ -2,9 +2,9 @@
 errors listed below, and try again.
 
 
-File "game/script.rpy", line 142: expected menuitem
-    if notTalkToCouple
-    ^
+File "game/script.rpy", line 437: expected statement.
+    lable anime:
+               ^
 
 Ren'Py Version: Ren'Py 8.3.2.24090902
-Sat Nov 23 21:06:01 2024
+Sat Nov 23 22:35:24 2024

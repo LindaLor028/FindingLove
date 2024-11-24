@@ -434,7 +434,7 @@ label movie:
     jump shopping
     
 #2.1.3 Anime Merch Booth
-lable anime:
+label anime:
     $ notTalkToAnime = False
     "You decide to check out the Anime Booth- maybe the owner knows something..."
     you "Oh hi."
@@ -488,6 +488,31 @@ label med:
     you "Okay! Thank you."
     jump shopping 
 
+label imi_booth:
+    $ notTalkToImi = False
+    "You decide to go to Senator Imi's Booth- maybe you'll see the keychains there."
+    "It's the lady from earlier..."
+    rep "Hello! Have you registered to vote for the next elections?"
+    you "Yes."
+    rep "Perfect! Make sure to tell your family and friends."
+    you "Actually-"
+    you '...'
+    you "Is Senator Imi here?"
+    rep "Ohh, no. She'll come later in the day. Still doing prep for some other stuff."
+    rep "How can I help you?"
+    you "Well, I was wondering if this keychian belonged to her..."
+    "You pull out the keychain and show it to the Booth Representative."
+    "She looks at it for a second and opens her mouth in shock."
+    rep "W-where did you get this!?"
+    "Suddenly, an FBI agent steps between you and the Booth Representative."
+    fbi "Excuse me, but Senator Imi's Booth won't be open until later."
+    fbi "I advise you to come back."
+    you "What???"
+    "The Booth Representative looks at you, eyes wide open, as the FBI Agent guides you from the booth."
+    "That was odd..."
+    jump shopping
+
+
 
 # 3.1 Wrap up ====================================================================================================
 label rose_booth:
@@ -519,10 +544,45 @@ label rose_booth:
             jump imi_end
         "Buy a white rose - Anime Booth Owner":
             jump anime_end
-        "Buy a pink rose - Hli"
+        "Buy a pink rose - Hli":
             jump hli_end
-        "Buy a purple rose - Claire"
+        "Buy a purple rose - Claire":
             jump claire_end
+
+label imi_end:
+    you "The keychain, the voice..."
+    you "All the clues are adding up..."
+    you "It just has to be Senator Imi!"
+    "You decide to wait until her booth opens again."
+    #TODO
+    rep "You're back!"
+    you "Ahaha... yeah."
+    you "Where's Senator Imi?"
+    rep "She should be coming... right abouuuut..."
+    rep "Now!"
+    #SOUND
+    "You see Senator Imi walking up to the booth, adorned by FBI agents."
+    imi "Thank you, thank you."
+    "She stops and looks at you."
+    "The eye contact..." #SOUND
+    you "Um, S-senator Imi.."
+    you "I- I..."
+    you "I believe this belongs to you."
+    "You hand her the keychain along with the red rose."
+    "Her mouth hangs open."
+    "Then she laughs nervously and tucks her hair behind her ear."
+    imi "Ahaha..."
+    imi "SECURITY!!!!"
+    "Before you realize what's happening, a group of FBI agents pounce on you."
+    "You're suffocated by their weight and can't get up."
+    #TODO
+    "..."
+    "Well, I guess Hmong people really {i}do{/i} make history."
+    return 
+    
+label anime_end:
+label hli_end:
+label claire_end:
         
 
     # This ends the game.
