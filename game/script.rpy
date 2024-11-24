@@ -47,7 +47,7 @@ image stageclosebg:
     xysize(1920,1080)
     
 image boothbg:
-    "boothbg.png"
+    "boothbg.jpg"
     xysize(1920,1080)
     
 image garagebg:
@@ -56,6 +56,14 @@ image garagebg:
     
 image garagedarkbg:
     "garagedarkbg.png"
+    xysize(1920,1080)
+
+image roombg:
+    "roombg.png"
+    xysize(1920,1080)
+
+image livingroombg:
+    "livingroombg.png"
     xysize(1920,1080)
 
 
@@ -89,6 +97,9 @@ label start:
     #show eileen happy
 
     # Start - Morning
+    scene roombg
+    with fade
+
     you "{i}groan{/i} what time is it..."
     show momI
     mom "Wake up!!! It's time to go to the Hmong New Year!"
@@ -106,6 +117,7 @@ label start:
         # Screen changes to parked car in parking garage; heels clicking sound
     scene garagebg
     with fade
+    show momI
     mom "You're so slow- we'll meet you inside."
     hide momI
     you "{i}groan{/i}"
@@ -347,6 +359,7 @@ label stage_front:
     "Senator Imi is still giving her speech."
     you "Wow, her voice is so..."
     you "Official sounding..."
+    show imiI
     imi "Thank you again for having me."
     imi "Nyob zoo xyoo tshiab!"
     "Your muscles tense up."
@@ -415,7 +428,7 @@ label main_area:
     jump shopping
 
 label shopping:
-    
+    scene boothbg
     if notTalkToInsurance or notTalkToActor or notTalkToMed or notTalkToImi:
         menu:
             "Where should you look?"
@@ -764,6 +777,7 @@ label claire_end:
     "If only you had waited 7 years, you wouldn't have had to play this dumb visual novel to find out it's actually her..."
     #TODO
     hide claireI
+    scene livingroombg
     "Ten years later, you and Claire are married."
     "You two rent a small apartment and live with two dogs, Chuffy and Wuffy."
     "Claire works while you stay home, clean the house, and do laundry."
