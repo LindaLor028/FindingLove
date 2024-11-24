@@ -2,9 +2,9 @@
 errors listed below, and try again.
 
 
-File "game/script.rpy", line 437: expected statement.
-    lable anime:
-               ^
+File "game/script.rpy", line 188: expected statement.
+    bg balltossbg
+                 ^
 
 Ren'Py Version: Ren'Py 8.3.2.24090902
-Sat Nov 23 22:35:24 2024
+Sun Nov 24 10:10:48 2024

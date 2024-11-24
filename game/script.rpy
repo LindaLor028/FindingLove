@@ -34,6 +34,29 @@ image roseI = "rose.PNG"
 image mcI = "mc.PNG"
 image guyI = "guy.PNG"
 
+image balltossbg:
+    "balltossbg.png"
+    xysize(1920,1080)
+    
+image stagebg:
+    "stagebg.png"
+    xysize(1920,1080)
+    
+image stageclosebg:
+    "stageclosebg.png"
+    xysize(1920,1080)
+    
+image boothbg:
+    "boothbg.png"
+    xysize(1920,1080)
+    
+image garagebg:
+    "garagebg.png"
+    xysize(1920,1080)
+    
+image garagedarkbg:
+    "garagedarkbg.png"
+    xysize(1920,1080)
 
 
 # The game starts here. ========================================================================================================================================================================
@@ -56,7 +79,8 @@ label start:
     # add a file (named either "bg room.png" or "bg room.jpg") to the
     # images directory to show it.
 
-    scene bg room
+    #scene balltossbg
+    #with fade
 
     # This shows a character sprite. A placeholder is used, but you can
     # replace it by adding a file named "eileen happy.png" to the images
@@ -80,6 +104,8 @@ label start:
     mom "Hurry up! We'll be late!!!"
 
         # Screen changes to parked car in parking garage; heels clicking sound
+    scene garagebg
+    with fade
     mom "You're so slow- we'll meet you inside."
     hide momI
     you "{i}groan{/i}"
@@ -87,7 +113,7 @@ label start:
     you "Well, I guess I better get going."
 
         # Screen shakes and blacks out.
-    
+    scene garagedarkbg
     "!!!"
     you "What was that!!?"
     anon "AHHHHH!!!"
@@ -159,6 +185,7 @@ label center:
 
 # 1.1.1 Ball Toss Spot =======================================================================================================================
 label balltoss:
+    scene balltossbg
     you "Maybe she's somewhere in the crowd."
     you "I'll ball toss around and see if she's here."
     jump balltoss_2
@@ -278,6 +305,7 @@ label guy:
 
 # 1.1.2 Main Stage =======================================================================================================================
 label stage:
+    scene stagebg
     "You head to the main stage- maybe you'll find luck there."
     show mcI
     mc "Please give the singer Cha Lis another round of applause!" #SOUND
@@ -312,6 +340,7 @@ label stage:
 
 # 1.1.2.1 Go Up To Stage
 label stage_front:
+    scene stageclosebg
     "You decide to go up to the stage."
     "There's no better way to know than being up close."
     # SCENE
@@ -386,6 +415,7 @@ label main_area:
     jump shopping
 
 label shopping:
+    
     if notTalkToInsurance or notTalkToActor or notTalkToMed or notTalkToImi:
         menu:
             "Where should you look?"
@@ -675,6 +705,7 @@ label anime_end:
 
 
 label hli_end:
+    scene balltossbg
     "The parking garage..."
     "There's not a lot of clues to build off from, but it might just be Hli."
     "Besides, she's the most likely characger to choose from a player's perspective."
