@@ -205,12 +205,26 @@ style input:
 ##
 ## https://www.renpy.org/doc/html/screen_special.html#choice
 
+#screen choice(items):
+    #style_prefix "choice"
+
+    #vbox:
+        #for i in items:
+            #textbutton i.caption action i.action
+
 screen choice(items):
     style_prefix "choice"
 
     vbox:
         for i in items:
-            textbutton i.caption action i.action
+
+            $ badge = i.kwargs.get("badge", None)
+
+            textbutton i.caption:
+                action i.action
+
+                if badge:
+                    foreground Transform("badge " + badge, xpos=30, yalign=1.0)
 
 
 style choice_vbox is vbox

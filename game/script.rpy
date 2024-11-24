@@ -39,6 +39,8 @@ image rando1 = "rando1.png"
 image rando2 = "rando2.png"
 image rando3 = "rando3.png"
 
+
+
 image balltossbg:
     "balltossbg.png"
     xysize(1920,1080)
@@ -127,6 +129,8 @@ label start:
     default notTalkToMed = True
     default notTalkToActor = True
     default notTalkToImi = True
+
+    
 
     # Show a background. This uses a placeholder by default, but you can
     # add a file (named either "bg room.png" or "bg room.jpg") to the
@@ -697,13 +701,13 @@ label rose_booth:
     menu:
         "Gather your clues up and decide which one you'll confess to!"
         
-        "Buy a red rose - Senator Imi":
+        "Buy a red rose - Senator Imi" (badge="imi"):
             jump imi_end
-        "Buy a white rose - Anime Booth Owner":
+        "Buy a white rose - Anime Booth Owner" (badge="anime"):
             jump anime_end
-        "Buy a pink rose - Hli":
+        "Buy a pink rose - Hli" (badge="hli"):
             jump hli_end
-        "Buy a purple rose - Claire":
+        "Buy a purple rose - Claire" (badge="claire"):
             jump claire_end
 
 label imi_end:
