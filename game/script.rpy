@@ -3,7 +3,21 @@
 # Declare characters used by this game. The color argument colorizes the
 # name of the character.
 
-define e = Character("Eileen")
+define you = Character("You")
+define anon = Character("???")
+define mom = Character("Mom")
+define hli = Character("Hli")
+define husband = Character("Elderly Husband")
+define wife = Character("Elderly Wife")
+define mc = Character("Stage MC")
+define imi = Character("Imi")
+define actor = Character("Actor")
+define granny = Character("Medicine Granny")
+define rep = Character("Booth Representative")
+define amy = Character("Amy")
+define anime = Character("Anime Merch Booth Owner")
+define fbi = Character("FBI Agent")
+define rose = Character("Rose Booth Owner")
 
 
 # The game starts here.
