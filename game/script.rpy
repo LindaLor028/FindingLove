@@ -110,6 +110,9 @@ image animeboothbg:
     "animeboothbg.png"
     xysize(1920,1080)
 
+image drivebg:
+    "drivebg.png"
+    xysize(1920,1080)
 
 
 
@@ -146,6 +149,7 @@ label start:
     #show eileen happy
 
     # Start - Morning
+    play music "Viktor Kraus - Blueberries.mp3"
     scene roombg
     with fade
 
@@ -160,12 +164,15 @@ label start:
     you "It's a yearly celebration that was traditionally meant to honor a year of harvest..."
     you "... and be a grounds for finding love with the infamous ball toss game..."
     you "... But I'm not so lucky-"
+    scene drivebg
+    play sound "cardrive.mp3" volume 1.5
+    pause 4
+    scene garagebg
+    with fade
     show momI
     mom "Hurry up! We'll be late!!!"
 
         # Screen changes to parked car in parking garage; heels clicking sound
-    scene garagebg
-    with fade
     show momI
     mom "You're so slow- we'll meet you inside."
     hide momI
@@ -470,6 +477,7 @@ label main_area:
     you "{i}sigh{/i} Back to the beginning..."
     you "I just feel like maybe I'm looking in the wrong places..."
     #SOUND
+    play sound "fight.mp3"
     show rando1
     anon "There's a fight!!!"
     hide rando1
@@ -489,6 +497,7 @@ label main_area:
     scene boothbg
     "The shopping area has cleared up since everyone has gone to see the fight."
     "This is the perfect time to find the original keychain owner!!!"
+    stop sound
     jump shopping
 
 label shopping:

@@ -10,3 +10,15 @@ https://www.freepik.com/free-photo/interior-design-with-yellow-bed-sheets_298011
 
 living room:
 https://www.freepik.com/free-photo/3d-rendering-loft-scandinavian-living-room-with-working-table-bookshelf_29945787.htm#fromView=search&page=1&position=42&uuid=21733826-efb9-4a69-a2cd-0e2448765344
+
+Opening Song:
+https://opengameart.org/content/menu-music-2
+
+Fight:
+https://www.youtube.com/watch?v=0jvX1N3u0Yo
+
+cardrive:
+https://freesound.org/people/ihaevevaa/sounds/713624/
+
+stpaul
+https://www.freepik.com/free-photo/ottawa-sunset_26922984.htm#fromView=search&page=1&position=36&uuid=d166b244-0a0b-4688-9f7b-effa4fc83ffe
