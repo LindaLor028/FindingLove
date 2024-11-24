@@ -25,6 +25,7 @@ label start:
     # These display lines of dialogue.
 
     e "I'm testing if these changes have applied..."
+    e "testing some more gitignore stuff... "
 
     e "Once you add a story, pictures, and music, you can release it to the world!"
 
