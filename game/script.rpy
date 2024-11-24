@@ -33,6 +33,11 @@ image grannyI = "granny.PNG"
 image roseI = "rose.PNG"
 image mcI = "mc.PNG"
 image guyI = "guy.PNG"
+image anonI = "anon.PNG"
+
+image rando1 = "rando1.png"
+image rando2 = "rando2.png"
+image rando3 = "rando3.png"
 
 image balltossbg:
     "balltossbg.png"
@@ -73,6 +78,38 @@ image enterbg:
 image centerbg:
     "centerbg.png"
     xysize(1920,1080)
+
+image animeboothbg:
+    "animeboothbg.png"
+    xysize(1920,1080)
+
+image claireboothbg:
+    "claireboothbg.png"
+    xysize(1920,1080)
+
+
+image actorboothbg:
+    "actorboothbg.png"
+    xysize(1920,1080)
+
+image grannyboothbg:
+    "grannyboothbg.png"
+    xysize(1920,1080)
+
+image imiboothbg:
+    "imiboothbg.png"
+    xysize(1920,1080)
+
+image rosesboothbg:
+    "rosesboothbg.png"
+    xysize(1920,1080)
+
+image animeboothbg:
+    "animeboothbg.png"
+    xysize(1920,1080)
+
+
+
 
 
 # The game starts here. ========================================================================================================================================================================
@@ -136,6 +173,7 @@ label start:
     scene garagedarkbg
     "!!!"
     you "What was that!!?"
+    show anonI
     anon "AHHHHH!!!"
     "You feel a hand brush past your shoulder and squeeze your arm. "
     anon "Why are the lights off!?!"
@@ -162,6 +200,7 @@ label start:
 # 0.1.1 Ask her to accompany you during the New Year
 label start_1:
     you "Hey... um-"
+    hide anonI
     anon "I gotta go!!!" #SOUND
     scene garagebg
     "The lights flicker on again and you're standing alone in the parking garage."
@@ -176,6 +215,7 @@ label start_2:
     "It's not her hand."
     "It's a keychain???"
     anon "Ack!!!" #SOUND
+    hide anonI
     "It sounds like she ran off..."
     "The lights flicker on again and you're standing alone in the parking garage."
     scene garagebg
@@ -426,16 +466,23 @@ label main_area:
     you "{i}sigh{/i} Back to the beginning..."
     you "I just feel like maybe I'm looking in the wrong places..."
     #SOUND
+    show rando1
     anon "There's a fight!!!"
+    hide rando1
+    show rando2
     anon2 "Ooh I want to see!"
+    hide rando2
     #SOUND
+    show rando3
     anon3 "Fight back! Fight back!!!"
+    hide rando3
     you "Shit!! I better get out of there!"
     "You rush out to the escalator area to avoid the fight."
     "You notice a few FBI agents rush past you."
     you "The FBI???"
     you "That's a little excesive."
     you "..."
+    scene boothbg
     "The shopping area has cleared up since everyone has gone to see the fight."
     "This is the perfect time to find the original keychain owner!!!"
     jump shopping
@@ -460,6 +507,7 @@ label shopping:
 
 #2.1.1 Pyramid Scheme
 label insurance:
+    scene claireboothbg
     $ notTalkToInsurance = False
     show claireI
     "You decide to check out the Insurance Booth."
@@ -504,6 +552,7 @@ label insurance:
 #2.1.2 Movie Booth
 label movie:
     $ notTalkToActor = False
+    scene actorboothbg
     show actorI
     "You decide to check out the Movie Booth- especially since there's no longer a line."
     actor "Where'd everyone go?"
@@ -528,6 +577,7 @@ label movie:
     
 #2.1.3 Anime Merch Booth
 label anime:
+    scene animeboothbg
     $ notTalkToAnime = False
     show animeI
     "You decide to check out the Anime Booth- maybe the owner knows something..."
@@ -565,6 +615,7 @@ label anime:
 #2.1.4 Medicine Booth
 label med:
     $ notTalkToMed = False
+    scene grannyboothbg
     show grannyI
     "You decide to check out the Medicine Booth- maybe the elderly lady will know something."
     "Oh shit- you don't really know how to speak Hmong-"
@@ -587,6 +638,7 @@ label med:
 
 label imi_booth:
     $ notTalkToImi = False
+    scene imiboothbg
     "You decide to go to Senator Imi's Booth- maybe you'll see the keychains there."
     "It's the lady from earlier..."
     show repI
@@ -601,13 +653,16 @@ label imi_booth:
     you "Well, I was wondering if this keychian belonged to her..."
     "You pull out the keychain and show it to the Booth Representative."
     "She looks at it for a second and opens her mouth in shock."
-    rep "W-where did you get this!?"
+    rep "W-where did you get this!?
+    "
     "Suddenly, an FBI agent steps between you and the Booth Representative."
+    hide repI
+    show fbiI
     fbi "Excuse me, but Senator Imi's Booth won't be open until later."
     fbi "I advise you to come back."
     you "What???"
     "The Booth Representative looks at you, eyes wide open, as the FBI Agent guides you from the booth."
-    hide repI
+    hide fbiI
     "That was odd..."
     jump shopping
 
@@ -617,6 +672,7 @@ label imi_booth:
 label rose_booth:
     "{i}sigh{/i} There's nowhere else to go now..."
     "And the day's almost ending."
+    scene rosesboothbg
     "Disheartened, you unknowingly stumble into a sign and it falls on the floor."
     "The sign reads:$5 for a rose"
     show roseI
@@ -654,6 +710,7 @@ label imi_end:
     you "The keychain, the voice..."
     you "All the clues are adding up..."
     you "It just has to be Senator Imi!"
+    scene imiboothbg
     "You decide to wait until her booth opens again."
     show repI
     rep "You're back!"
@@ -687,6 +744,7 @@ label imi_end:
 label anime_end:
     "The parking garage... The keychain..."
     "It's got to be the Anime Booth Owner!"
+    scene animeboothbg
     "You sprint over to her booth." 
     you "H-hey!" 
     "As you catch your breath, you see her turn around- eyes open."
@@ -768,6 +826,7 @@ label hli_end:
 label claire_end:
     "The keychain, the familiar presence..."
     "It's got to be Claire!"
+    scene claireboothbg
     "You rush over to her booth."
     show claireI
     you "Claire!"
