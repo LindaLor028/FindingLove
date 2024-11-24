@@ -1,8 +1,6 @@
 # The script of the game goes in this file.
 
-# Declare characters used by this game. The color argument colorizes the
-# name of the character.
-
+# CHARACTER VARIABLES ========================================================================================================================================================================
 define you = Character("You")
 define anon = Character("???")
 define anon2 = Character("???")
@@ -21,8 +19,24 @@ define anime = Character("Anime Merch Booth Owner")
 define fbi = Character("FBI Agent")
 define rose = Character("Rose Booth Owner")
 
+# IMAGE SPRITES!  ========================================================================================================================================================================
+image momI = "mom.PNG"
+image hliI = "hli.PNG"
+image imiI = "imi.PNG"
+image claireI = "claire.PNG"
+image animeI = "anime.PNG"
+image repI = "rep.PNG"
+image fbiI = "fbi.PNG"
+image coupleI = "couple.PNG"
+image actorI = "actor.PNG"
+image grannyI = "granny.PNG"
+image roseI = "rose.PNG"
+image mcI = "mc.PNG"
+image guyI = "guy.PNG"
 
-# The game starts here.
+
+
+# The game starts here. ========================================================================================================================================================================
 
 # 0.0 Start - Morning
 label start:
@@ -52,18 +66,22 @@ label start:
 
     # Start - Morning
     you "{i}groan{/i} what time is it..."
+    show momI
     mom "Wake up!!! It's time to go to the Hmong New Year!"
     mom "Get out of bed sleepy head!"
+    hide momI
     you "{i} urgggh"
     you "It's that time of the year again..."
     you "The Hmong New Year..."
     you "It's a yearly celebration that was traditionally meant to honor a year of harvest..."
     you "... and be a grounds for finding love with the infamous ball toss game..."
     you "... But I'm not so lucky-"
+    show momI
     mom "Hurry up! We'll be late!!!"
 
         # Screen changes to parked car in parking garage; heels clicking sound
     mom "You're so slow- we'll meet you inside."
+    hide momI
     you "{i}groan{/i}"
     you "..."
     you "Well, I guess I better get going."
@@ -167,17 +185,20 @@ label balltoss_2:
 # 1.1.1.1 Old Couple
 label couple:
     $ notTalkToCouple = False
+    show coupleI
     you "Hmm, maybe I can talk to this couple. They look nice."
     "As you approach the couple, you hear them talking."
     wife "Ohh, cov hluas no mas... tsis keej kiag li os!"
     husband "Oi! Txoj hais li kos mas..."
     "You don't know how to speak Hmong... "
     "Better stay away from that conversation."
+    hide coupleI
     jump balltoss_2
 
 # 1.1.1.2 Random Girl
 label girl:
     $ notTalkToGirl = False
+    show hliI
     "This girl doesn't look too bad."
     "And it seems like she's waiting for someone too!"
     you "Oh hey... I was wondering if you wanted to ball toss together."
@@ -209,11 +230,13 @@ label girl:
     you "Oh.. okay"
     "Hmm, weird."
     "It would've been perfect if Hli was the one you were looking for- but I guess that'd make the game too easy..."
+    hide hliI
     jump balltoss_2
 
 # 1.1.1.2 Random Guy
 label guy:
     $ notTalkToGuy = False
+    show guyI
     "This guy looks knowledgable. Maybe he'll know something helpful."
     you "Excuse me."
     anon "Woah!!!"
@@ -245,6 +268,7 @@ label guy:
     anon "You know I like girls right?"
     you "..."
     "This is getting weird. You leave."
+    hide guyI
     jump balltoss_2
 
 
@@ -255,12 +279,15 @@ label guy:
 # 1.1.2 Main Stage =======================================================================================================================
 label stage:
     "You head to the main stage- maybe you'll find luck there."
+    show mcI
     mc "Please give the singer Cha Lis another round of applause!" #SOUND
     mc "..."
     mc "Alright, now I would like to welcome a very, very special guest."
     mc "The {i}very{/i} senator of our {i}xeev{/i} Minnesota, Imi Clobasure!!!!" 
+    hide mcI
     #SOUND
     "You watch as Imi walks up on stage..."
+    show imiI
     "She looks somewhat familiar."
     imi "Thank you, thank you."
     #SOUND 
@@ -298,9 +325,11 @@ label stage_front:
     "This voice is way too familiar..."
     #SOUND
     "By the time you look up, Imi has already walked off stage."
+    hide imiI
     "All you see is her back"
     "Getting smaller and smaller..."
     "Then you hear a voice."
+    show repI
     anon "I love our senator."
     you "Huh?"
     anon "Oh what- sorry. I didn't realize I said that aloud."
@@ -309,6 +338,7 @@ label stage_front:
     anon "If you want, you should visit her at her booth later in the evening."
     anon "I heard she'll be giving out keychains."
     you "Keychains, huh..."
+    hide repI
     "It looks like the remaining stage line-up is just beauty pageant stuff... "
     "Let's go back and check out the main area."
     jump center
@@ -320,11 +350,14 @@ label afar:
     "It might seem too desparate too."
     imi "I love Minnesota and our Hmong community."
     imi "Thank you for having me."
+    hide imiI
     #SOUND
+    show mcI
     mc "Please give our senator Imi another round of applause!"
     #SOUND
     mc "Imi will be at her booth giving out keychains later this evening."
     mc "So please drop by and give her a visit!"
+    hide mcI
     you "Keychains!?"
     you "This doesn't feel like a coincidence..."
     you "Maybe you should've gone up to the stage and checked her out closer..."
@@ -361,7 +394,7 @@ label shopping:
             "Movie Booth" if notTalkToActor:
                 jump movie
             "Anime Merch Booth" if notTalkToAnime:
-                jump merch
+                jump anime
             "Medicine Booth" if notTalkToMed:
                 jump med
             "Senator Imi's Booth" if notTalkToImi:
@@ -372,6 +405,7 @@ label shopping:
 #2.1.1 Pyramid Scheme
 label insurance:
     $ notTalkToInsurance = False
+    show claireI
     "You decide to check out the Insurance Booth."
     you "Hmm, let me ask if this person knows anything about the keychain..."
     you "Hi- do you know if anyone has lost a keychain and is looking for it?"
@@ -407,12 +441,14 @@ label insurance:
     you "Thanks Claire, but I should get going."
     claire "Don't you want to sign the policy though!?"
     "You smile and shake your head."
+    hide claireI
     you "Maybe next time..."
     jump shopping
 
 #2.1.2 Movie Booth
 label movie:
     $ notTalkToActor = False
+    show actorI
     "You decide to check out the Movie Booth- especially since there's no longer a line."
     actor "Where'd everyone go?"
     you "Oh.. a fight broke out."
@@ -431,11 +467,13 @@ label movie:
     actor "The owner is a fine young lady. She sells a lot of those keychains actually."
     actor "Maybe it belongs to her?"
     you "Ohh, okay. Thank you."
+    hide actorI
     jump shopping
     
 #2.1.3 Anime Merch Booth
 label anime:
     $ notTalkToAnime = False
+    show animeI
     "You decide to check out the Anime Booth- maybe the owner knows something..."
     you "Oh hi."
     anime "Sorry- cash only and no returns."
@@ -464,12 +502,14 @@ label anime:
     you "Well- it's not that. I just- ..."
     "Before you can finish your sentence, the booth owner gets a phone call and gives you small wave."
     "She looks busy...maybe you can come back."
+    hide animeI
     jump shopping
 
 
 #2.1.4 Medicine Booth
 label med:
     $ notTalkToMed = False
+    show grannyI
     "You decide to check out the Medicine Booth- maybe the elderly lady will know something."
     "Oh shit- you don't really know how to speak Hmong-"
     granny "Oh! Nyob zoo me tub. Puas muaj dab tsis koj xav yuas?"
@@ -486,12 +526,14 @@ label med:
     granny "..."
     granny "Maybe you should try talking to her if you haven't. She's at the Insurance booth."
     you "Okay! Thank you."
+    hide grannyI
     jump shopping 
 
 label imi_booth:
     $ notTalkToImi = False
     "You decide to go to Senator Imi's Booth- maybe you'll see the keychains there."
     "It's the lady from earlier..."
+    show repI
     rep "Hello! Have you registered to vote for the next elections?"
     you "Yes."
     rep "Perfect! Make sure to tell your family and friends."
@@ -509,6 +551,7 @@ label imi_booth:
     fbi "I advise you to come back."
     you "What???"
     "The Booth Representative looks at you, eyes wide open, as the FBI Agent guides you from the booth."
+    hide repI
     "That was odd..."
     jump shopping
 
@@ -520,6 +563,7 @@ label rose_booth:
     "And the day's almost ending."
     "Disheartened, you unknowingly stumble into a sign and it falls on the floor."
     "The sign reads:$5 for a rose"
+    show roseI
     rose "Oh no my sign!"
     "The owner of a rose booth runs toward you and grabs the sign from your feet."
     rose "Sorry about that. My sign is not taped very well."
@@ -536,6 +580,7 @@ label rose_booth:
     rose "Huh?"
     you "I'll buy a rose!"
     "Before the day ends, you need to find that girl!"
+    hide roseI
     
     menu:
         "Gather your clues up and decide which one you'll confess to!"
@@ -554,14 +599,16 @@ label imi_end:
     you "All the clues are adding up..."
     you "It just has to be Senator Imi!"
     "You decide to wait until her booth opens again."
-    #TODO
+    show repI
     rep "You're back!"
     you "Ahaha... yeah."
     you "Where's Senator Imi?"
     rep "She should be coming... right abouuuut..."
     rep "Now!"
+    hide repI
     #SOUND
     "You see Senator Imi walking up to the booth, adorned by FBI agents."
+    show imiI
     imi "Thank you, thank you."
     "She stops and looks at you."
     "The eye contact..." #SOUND
@@ -573,6 +620,7 @@ label imi_end:
     "Then she laughs nervously and tucks her hair behind her ear."
     imi "Ahaha..."
     imi "SECURITY!!!!"
+    hide imiI
     "Before you realize what's happening, a group of FBI agents pounce on you."
     "You're suffocated by their weight and can't get up."
     #TODO
@@ -586,6 +634,7 @@ label anime_end:
     "You sprint over to her booth." 
     you "H-hey!" 
     "As you catch your breath, you see her turn around- eyes open."
+    show animeI
     anime "Oh? You again? What's up?"
     "You pull the keychain out of your pocket and show it to her- still catching your breath."
     "Before you can explain yourself, she rapidly turns her head away from the keychain."
@@ -604,16 +653,19 @@ label anime_end:
     you "Sure"
     "You watch her open her register and put all the cash in her fanny pack. She smiles at you."
     anime "I use dollars to wipe..."
+    hide animeI
     "That's kind of weird..."
     "She then walks towards the bathroom..."
     "And makes a sharp turn towards an FBI Agent standing at Imi's booth!?"
     "They talk for a bit then she points at you."
     "You see the FBI Agent walk towards you... This is getting weird."
     you "Um... can I help you?"
+    show fbiI
     fbi "Can I see that keychain?"
     you "What?"
     fbi "I heard from that lady that you've been selling counterfeit anime merch???"
     fbi "YOU THINK THAT'S FUNNY!?"
+    hide fbiI
     "Before you realize what's happening, a group of FBI agents pounce on you."
     "You're suffocated by their weight and can't get up."
     #TODO
@@ -629,6 +681,7 @@ label hli_end:
     "You decide to go back to the Ball Toss area (now that the fight has been broken out)"
     "..."
     "There she is!" #SOUND
+    show hliI
     hli "Oh! It's you."
     hli "Any luck in finding your person?"
     you "Well, it's actually you."
@@ -648,6 +701,7 @@ label hli_end:
     hli "Sorry- I didn't recognize it earlier because I thought it was a dupe."
     hli "Someone's selling dupes at one of the booths... "
     hli "Anyway, then you ARE the one I'm looking for!"
+    hide hliI
     #SOUND
     "You and Hli embrace in a hug."
     "Finally!"
@@ -658,6 +712,7 @@ label claire_end:
     "The keychain, the familiar presence..."
     "It's got to be Claire!"
     "You rush over to her booth."
+    show claireI
     you "Claire!"
     claire "Oh, hey again!"
     you "Is this really your keychain?"
@@ -677,6 +732,7 @@ label claire_end:
     "You can't believe you gave up on liking her 2 years ago."
     "If only you had waited 7 years, you wouldn't have had to play this dumb visual novel to find out it's actually her..."
     #TODO
+    hide claireI
     "Ten years later, you and Claire are married."
     "You two rent a small apartment and live with two dogs, Chuffy and Wuffy."
     "Claire works while you stay home, clean the house, and do laundry."
@@ -684,6 +740,7 @@ label claire_end:
     fbi "FBI OPEN UP!"
     you "The FBI???"
     "You open the door and see the same FBI agent from the New Year 10 years ago..."
+    show fbiI
     "Weird."
     fbi "You're under arrest for commiting life insurance fraud!!!"
     you "WHAT!?"
@@ -694,6 +751,7 @@ label claire_end:
     fbi "If you don't comply, we're going to have to-"
     you "Wait- wait. Let me just call Claire!"
     fbi "DID YOU JUST INTERRUPT ME!?!!?"
+    hide fbiI
     "Before you realize what's happening, a group of FBI agents pounce on you."
     "You're suffocated by their weight and can't get up."
     #TODO
