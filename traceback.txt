@@ -1,30 +1,40 @@
 ﻿I'm sorry, but an uncaught exception occurred.
 
-While running game code:
-  File "game/script.rpy", line 703, in script
-    menu:
-  File "game/script.rpy", line 706, in <module>
-    "Buy a red rose - Senator Imi" (badge=imiB):
-NameError: name 'imiB' is not defined
+After initialization, but before game start.
+  File "game/screens.rpy", line 366, in prepare_screen
+    screen main_menu():
+  File "game/screens.rpy", line 366, in prepare
+    screen main_menu():
+  File "game/screens.rpy", line 371, in prepare
+    add gui.main_menu_background (1920, 1080)
+  File "game/screens.rpy", line 371, in <module>
+    add gui.main_menu_background (1920, 1080)
+TypeError: 'str' object is not callable
 
 -- Full Traceback ------------------------------------------------------------
 
 Full traceback:
-  File "game/script.rpy", line 703, in script
-    menu:
-  File "/Volumes/renpy-8.3.2-sdk/renpy-8.3.2-sdk/renpy/ast.py", line 1610, in execute
-    item_arguments.append(self.item_arguments[i].evaluate())
-  File "/Volumes/renpy-8.3.2-sdk/renpy-8.3.2-sdk/renpy/parameter.py", line 503, in evaluate
-    value = renpy.python.py_eval(v, locals=scope)
-  File "/Volumes/renpy-8.3.2-sdk/renpy-8.3.2-sdk/renpy/python.py", line 1209, in py_eval
-    return py_eval_bytecode(code, globals, locals)
+  File "/Volumes/renpy-8.3.2-sdk/renpy-8.3.2-sdk/renpy/bootstrap.py", line 359, in bootstrap
+    renpy.main.main()
+  File "/Volumes/renpy-8.3.2-sdk/renpy-8.3.2-sdk/renpy/main.py", line 652, in main
+    run(restart)
+  File "/Volumes/renpy-8.3.2-sdk/renpy-8.3.2-sdk/renpy/main.py", line 94, in run
+    renpy.display.screen.prepare_screens()
+  File "/Volumes/renpy-8.3.2-sdk/renpy-8.3.2-sdk/renpy/display/screen.py", line 1026, in prepare_screens
+    s.ast.prepare_screen()
+  File "game/screens.rpy", line 366, in prepare_screen
+    screen main_menu():
+  File "game/screens.rpy", line 366, in prepare
+    screen main_menu():
+  File "game/screens.rpy", line 371, in prepare
+    add gui.main_menu_background (1920, 1080)
   File "/Volumes/renpy-8.3.2-sdk/renpy-8.3.2-sdk/renpy/python.py", line 1202, in py_eval_bytecode
     return eval(bytecode, globals, locals)
-  File "game/script.rpy", line 706, in <module>
-    "Buy a red rose - Senator Imi" (badge=imiB):
-NameError: name 'imiB' is not defined
+  File "game/screens.rpy", line 371, in <module>
+    add gui.main_menu_background (1920, 1080)
+TypeError: 'str' object is not callable
 
 macOS-15.1.1-arm64-arm-64bit arm64
 Ren'Py 8.3.2.24090902
 FindingLove_AHmongNewYearGame 1.0
-Sun Nov 24 12:56:56 2024
+Sun Nov 24 17:36:55 2024

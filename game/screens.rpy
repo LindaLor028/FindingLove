@@ -368,7 +368,7 @@ screen main_menu():
     ## This ensures that any other menu screen is replaced.
     tag menu
 
-    add gui.main_menu_background
+    add gui.main_menu_background size (1920, 1080)
 
     ## This empty frame darkens the main menu.
     frame:

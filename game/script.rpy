@@ -834,7 +834,7 @@ label hli_end:
     hli "Are you really the one from this morning?"
     hli "What about the keychain?"
     you "..."
-    you "Maybe you shoudl take another look at it."
+    you "Maybe you should take another look at it."
     "You pull out the keychain and Hli looks at it again."
     hli "{i}gasp{/i}"
     hli "It DOES belong to me!!!"
