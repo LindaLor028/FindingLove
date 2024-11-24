@@ -38,6 +38,7 @@ image anonI = "anon.PNG"
 image rando1 = "rando1.png"
 image rando2 = "rando2.png"
 image rando3 = "rando3.png"
+image keychainI = "keychain.png"
 
 
 
@@ -219,6 +220,7 @@ label start_1:
     scene garagebg
     "The lights flicker on again and you're standing alone in the parking garage."
     "Who was that..."
+    show keychainI
     "You look down and notice a keychain and pick it up..."
     jump keychain
 
@@ -234,6 +236,7 @@ label start_2:
     "It sounds like she ran off..."
     "The lights flicker on again and you're standing alone in the parking garage."
     scene garagebg
+    show keychainI
     "You look at the keychain."
     jump keychain
 
@@ -243,6 +246,7 @@ label keychain:
     "This is your answer to love."
     you "I need to find its original owner."
     "Empowered by this new purpose, you march into the Ex-Sell Energy Center- ready to find the love of your life."
+    hide keychainI
     jump center 
 
 # 1.0 Center
