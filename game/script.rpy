@@ -150,6 +150,7 @@ label start:
 
     # Start - Morning
     play music "Viktor Kraus - Blueberries.mp3"
+
     scene roombg
     with fade
 
@@ -175,6 +176,7 @@ label start:
         # Screen changes to parked car in parking garage; heels clicking sound
     show momI
     mom "You're so slow- we'll meet you inside."
+    play sound "running.wav"
     hide momI
     you "{i}groan{/i}"
     you "..."
@@ -213,6 +215,7 @@ label start_1:
     you "Hey... um-"
     hide anonI
     anon "I gotta go!!!" #SOUND
+    play sound "running.wav"
     scene garagebg
     "The lights flicker on again and you're standing alone in the parking garage."
     "Who was that..."
@@ -226,6 +229,7 @@ label start_2:
     "It's not her hand."
     "It's a keychain???"
     anon "Ack!!!" #SOUND
+    play sound "running.wav"
     hide anonI
     "It sounds like she ran off..."
     "The lights flicker on again and you're standing alone in the parking garage."
@@ -482,6 +486,7 @@ label main_area:
     anon "There's a fight!!!"
     hide rando1
     show rando2
+    play sound "pipe.mp3" volume 0.7
     anon2 "Ooh I want to see!"
     hide rando2
     #SOUND
@@ -720,6 +725,7 @@ label rose_booth:
             jump claire_end
 
 label imi_end:
+    play music "slow_techno_track_2.ogg"
     you "The keychain, the voice..."
     you "All the clues are adding up..."
     you "It just has to be Senator Imi!"
@@ -755,6 +761,7 @@ label imi_end:
     return 
 
 label anime_end:
+    play music "05 - DownTempo Avenue.mp3"
     "The parking garage... The keychain..."
     "It's got to be the Anime Booth Owner!"
     scene animeboothbg
@@ -803,6 +810,7 @@ label anime_end:
 
 label hli_end:
     scene balltossbg
+    play music "Summer_Days_WIP.wav"
     "The parking garage..."
     "There's not a lot of clues to build off from, but it might just be Hli."
     "Besides, she's the most likely characger to choose from a player's perspective."
@@ -837,6 +845,7 @@ label hli_end:
     return
 
 label claire_end:
+    play music "Kim Lightyear - Friends (Loop Edit).mp3"
     "The keychain, the familiar presence..."
     "It's got to be Claire!"
     scene claireboothbg
@@ -860,7 +869,6 @@ label claire_end:
     "This has been such a long journey."
     "You can't believe you gave up on liking her 2 years ago."
     "If only you had waited 7 years, you wouldn't have had to play this dumb visual novel to find out it's actually her..."
-    #TODO
     hide claireI
     scene livingroombg
     "Ten years later, you and Claire are married."
@@ -884,7 +892,6 @@ label claire_end:
     hide fbiI
     "Before you realize what's happening, a group of FBI agents pounce on you."
     "You're suffocated by their weight and can't get up."
-    #TODO
     "..."
     "Well, I guess Hmong people really {i}do{/i} make history."
     return 
