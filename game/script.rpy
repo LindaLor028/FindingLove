@@ -40,6 +40,9 @@ image rando2 = "rando2.png"
 image rando3 = "rando3.png"
 image keychainI = "keychain.png"
 
+image toss = "tossref.png"
+image farm = "farmref.png"
+
 
 
 image balltossbg:
@@ -115,6 +118,10 @@ image drivebg:
     "drivebg.png"
     xysize(1920,1080)
 
+image doodelor:
+    "doodlelor.png"
+    xysize(1920,1080)
+
 
 
 
@@ -150,10 +157,14 @@ label start:
     #show eileen happy
 
     # Start - Morning
-    play music "Viktor Kraus - Blueberries.mp3"
-
+    stop music
+    scene doodlelor
+    with fade
+    pause 3
     scene roombg
     with fade
+
+    play music "Viktor Kraus - Blueberries.mp3"
 
     you "{i}groan{/i} what time is it..."
     show momI
@@ -163,8 +174,12 @@ label start:
     you "{i} urgggh"
     you "It's that time of the year again..."
     you "The Hmong New Year..."
+    show farmref
     you "It's a yearly celebration that was traditionally meant to honor a year of harvest..."
+    hide farmref
+    show tossref
     you "... and be a grounds for finding love with the infamous ball toss game..."
+    hide tossref
     you "... But I'm not so lucky-"
     scene drivebg
     play sound "cardrive.mp3" volume 1.5
@@ -199,6 +214,7 @@ label start:
     "It's dark but you can hear the kindness in her voice."
     anon "Ahh, sorry! I'm really scared of the dark."
     anon "I grabbed you without realizing it..."
+    play sound "heartbeat.mp3"
     "You feel your face growing red..."
     "Maybe this year isn't as bad as you thought."
 
@@ -408,6 +424,7 @@ label stage:
     you "Wait a minute..."
     you "That voice..."
     you "It sounds familiar!!!"
+    play sound "heartbeat.mp3"
     "You feel your heart start to pump."
     "It's a voice full of kindness- just like at the parking garage..."
     you "Is this a coincidence?"
@@ -495,13 +512,14 @@ label main_area:
     hide rando2
     #SOUND
     show rando3
+    play sound "fight.mp3"
     anon3 "Fight back! Fight back!!!"
     hide rando3
     you "Shit!! I better get out of there!"
     "You rush out to the escalator area to avoid the fight."
     "You notice a few FBI agents rush past you."
     you "The FBI???"
-    you "That's a little excesive."
+    you "That's a little excessive."
     you "..."
     scene boothbg
     "The shopping area has cleared up since everyone has gone to see the fight."
@@ -545,6 +563,7 @@ label insurance:
     anon "It's me- Claire! Don't you remember me?"
     you "What? Claire???"
     "You realize it {i}is{/s} Claire!!!"
+    play sound "heartbeat.mp3"
     "Claire was your first crush and you liked her for five years straight..."
     "Such an interesting time to be alive..."
     claire "Gosh- it's been a minute... What have you been up to?"
@@ -741,6 +760,7 @@ label imi_end:
     you "Where's Senator Imi?"
     rep "She should be coming... right abouuuut..."
     rep "Now!"
+    play sound "heartbeat.mp3"
     hide repI
     #SOUND
     "You see Senator Imi walking up to the booth, adorned by FBI agents."
@@ -783,6 +803,7 @@ label anime_end:
     anime "..."
     you "..."
     you "Can I just talk to you about something?"
+    play sound "heartbeat.mp3"
     you "What happened in the parking garage... I have never felt that way before." #SOUND
     you "I- I think I like you and I really want to know you better."
     "Silence. You look up at the Anime Booth Owner and notice that she's smiling."
@@ -817,9 +838,10 @@ label hli_end:
     play music "Summer_Days_WIP.wav"
     "The parking garage..."
     "There's not a lot of clues to build off from, but it might just be Hli."
-    "Besides, she's the most likely characger to choose from a player's perspective."
+    "Besides, she's the most likely character to choose from a player's perspective."
     "You decide to go back to the Ball Toss area (now that the fight has been broken out)"
     "..."
+    play sound "heartbeat.mp3"
     "There she is!" #SOUND
     show hliI
     hli "Oh! It's you."
@@ -853,6 +875,7 @@ label claire_end:
     "The keychain, the familiar presence..."
     "It's got to be Claire!"
     scene claireboothbg
+    play sound "heartbeat.mp3"
     "You rush over to her booth."
     show claireI
     you "Claire!"
