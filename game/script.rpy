@@ -853,7 +853,7 @@ label hli_end:
     you "Well, it's actually you."
     you "I'm certain"
     hli "What..?"
-    you "Yes. Did you run into your person while the parking garage happened to blackout."
+    you "Yes. Did you run into your person while the parking garage happened to blackout?"
     hli "Blackout?"
     you "Yes."
     hli "..."
@@ -872,7 +872,7 @@ label hli_end:
     "You and Hli embrace in a hug."
     "Finally!"
     "Love at last!"
-    "GOOD ENDING - Claire tricked you into marrying her and she used your information to commit life insurance fraud."
+    "GOOD ENDING - You found the right girl!"
     return
 
 label claire_end:
