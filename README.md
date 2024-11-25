@@ -45,4 +45,6 @@ This project is intended to tease the idea of a Hmong game and Visual Novels- at
 
 Again, thank you for playing!
 
+![Thank You Banner](/game/ReadMeImages/thankyou.png)
+
 
