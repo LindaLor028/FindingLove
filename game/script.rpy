@@ -777,6 +777,7 @@ label imi_end:
     imi "Ahaha..."
     imi "SECURITY!!!!"
     hide imiI
+    play sound "fight.mp3"
     "Before you realize what's happening, a group of FBI agents pounce on you."
     "You're suffocated by their weight and can't get up."
     #TODO
@@ -826,6 +827,7 @@ label anime_end:
     fbi "I heard from that lady that you've been selling counterfeit anime merch???"
     fbi "YOU THINK THAT'S FUNNY!?"
     hide fbiI
+    play sound "fight.mp3"
     "Before you realize what's happening, a group of FBI agents pounce on you."
     "You're suffocated by their weight and can't get up."
     #TODO
@@ -919,6 +921,7 @@ label claire_end:
     you "Wait- wait. Let me just call Claire!"
     fbi "DID YOU JUST INTERRUPT ME!?!!?"
     hide fbiI
+    play sound "fight.mp3"
     "Before you realize what's happening, a group of FBI agents pounce on you."
     "You're suffocated by their weight and can't get up."
     "..."
