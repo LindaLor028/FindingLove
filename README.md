@@ -2,7 +2,7 @@
 
 Finding Love - A Hmong New Year Game is a visual novel game where you play as the protagonist- searching to find the love of his life at the [Hmong New Year](https://www.visitsaintpaul.com/blog/guide-to-hmong-new-year/). 
 
-The game repository is made available for those interested in seeing the little to no dev work. The actual game can be played at itch.io here. 
+The game repository is made available for those interested in seeing the little to no dev work. The actual game can be played at itch.io [here](https://doodlelor.itch.io/finding-love). 
 
 ![Game Menu Page](/game/ReadMeImages/homescreen.png)
 
