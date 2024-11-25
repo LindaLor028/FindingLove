@@ -122,6 +122,10 @@ image doodelor:
     "doodlelor.png"
     xysize(1920,1080)
 
+image blackbg:
+    "blackbg.png"
+    xysize(1920,1080)
+
 
 
 
@@ -214,7 +218,6 @@ label start:
     "It's dark but you can hear the kindness in her voice."
     anon "Ahh, sorry! I'm really scared of the dark."
     anon "I grabbed you without realizing it..."
-    play sound "heartbeat.mp3"
     "You feel your face growing red..."
     "Maybe this year isn't as bad as you thought."
 
@@ -424,7 +427,6 @@ label stage:
     you "Wait a minute..."
     you "That voice..."
     you "It sounds familiar!!!"
-    play sound "heartbeat.mp3"
     "You feel your heart start to pump."
     "It's a voice full of kindness- just like at the parking garage..."
     you "Is this a coincidence?"
@@ -563,7 +565,6 @@ label insurance:
     anon "It's me- Claire! Don't you remember me?"
     you "What? Claire???"
     "You realize it {i}is{/s} Claire!!!"
-    play sound "heartbeat.mp3"
     "Claire was your first crush and you liked her for five years straight..."
     "Such an interesting time to be alive..."
     claire "Gosh- it's been a minute... What have you been up to?"
@@ -760,7 +761,6 @@ label imi_end:
     you "Where's Senator Imi?"
     rep "She should be coming... right abouuuut..."
     rep "Now!"
-    play sound "heartbeat.mp3"
     hide repI
     #SOUND
     "You see Senator Imi walking up to the booth, adorned by FBI agents."
@@ -782,6 +782,8 @@ label imi_end:
     #TODO
     "..."
     "Well, I guess Hmong people really {i}do{/i} make history."
+    scene blackbg
+    "BAD ENDING - Dude, the Senator's wayyy out of your league. I don't even know why you chose her."
     return 
 
 label anime_end:
@@ -803,7 +805,6 @@ label anime_end:
     anime "..."
     you "..."
     you "Can I just talk to you about something?"
-    play sound "heartbeat.mp3"
     you "What happened in the parking garage... I have never felt that way before." #SOUND
     you "I- I think I like you and I really want to know you better."
     "Silence. You look up at the Anime Booth Owner and notice that she's smiling."
@@ -830,6 +831,8 @@ label anime_end:
     #TODO
     "..."
     "Well, I guess Hmong people really {i}do{/i} make history."
+    scene blackbg
+    "BAD ENDING - The Anime Booth Owner framed you for selling her counterfeit goods."
     return 
 
 
@@ -841,7 +844,6 @@ label hli_end:
     "Besides, she's the most likely character to choose from a player's perspective."
     "You decide to go back to the Ball Toss area (now that the fight has been broken out)"
     "..."
-    play sound "heartbeat.mp3"
     "There she is!" #SOUND
     show hliI
     hli "Oh! It's you."
@@ -868,6 +870,7 @@ label hli_end:
     "You and Hli embrace in a hug."
     "Finally!"
     "Love at last!"
+    "GOOD ENDING - Claire tricked you into marrying her and she used your information to commit life insurance fraud."
     return
 
 label claire_end:
@@ -875,7 +878,6 @@ label claire_end:
     "The keychain, the familiar presence..."
     "It's got to be Claire!"
     scene claireboothbg
-    play sound "heartbeat.mp3"
     "You rush over to her booth."
     show claireI
     you "Claire!"
@@ -921,4 +923,6 @@ label claire_end:
     "You're suffocated by their weight and can't get up."
     "..."
     "Well, I guess Hmong people really {i}do{/i} make history."
+    scene blackbg
+    "BAD ENDING - Claire tricked you into marrying her and she used your information to commit life insurance fraud."
     return 
