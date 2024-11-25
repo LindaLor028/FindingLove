@@ -1,3 +1,11 @@
+## Finding Love - A Hmong New Year Game
+
+Finding Love - A Hmong New Year Game is a visual novel game where you play as the protagonist- searching to find the love of his life at the [Hmong New Year](https://www.visitsaintpaul.com/blog/guide-to-hmong-new-year/). 
+
+The game repository is made available for those interested in seeing the little to no dev work. The actual game can be played at itch.io here. 
+
+![Game Menu Page](/ReadMeImages/homescreen.png)
+
 
 Parking Garage Photo:
 https://www.freepik.com/free-photo/horizontal-picture-car-parking-underground-garage-interior-with-neon-lights-autocars-parked-buildings-urban-constructions-space-transportation-vehicle-night-city-concept_11284626.htm#fromView=search&page=1&position=14&uuid=6eeb4ed8-348d-4b78-a81a-5f3b85a55f76
